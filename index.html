@@ -3,37 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Одяг Стилі</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Сучасний Одяг</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Оберіть стиль одягу</h1>
-        <div class="styles">
-            <div class="style-card">
-                <img src="style1.jpg" alt="Стиль 1">
-                 <p>Опіум</p>
+    <header>
+        <h1>Сучасний Одяг</h1>
+    </header>
+
+    <main>
+        <!-- Слайдер -->
+        <div class="slider">
+            <button class="prev">❮</button>
+            <div class="slides">
+                <div class="slide">
+                    <img src="images/outfit1.jpg" alt="Сучасний стиль 1">
+                    <p class="style-title" onclick="searchStyle('Сучасний стиль 1')">Сучасний стиль 1</p>
+                </div>
+                <div class="slide">
+                    <img src="images/outfit2.jpg" alt="Сучасний стиль 2">
+                    <p class="style-title" onclick="searchStyle('Сучасний стиль 2')">Сучасний стиль 2</p>
+                </div>
+                <div class="slide">
+                    <img src="images/outfit3.jpg" alt="Сучасний стиль 3">
+                    <p class="style-title" onclick="searchStyle('Сучасний стиль 3')">Сучасний стиль 3</p>
+                </div>
             </div>
-            <div class="style-card">
-                <img src="style2.jpg" alt="Стиль 2">
-                <p>Готика</p>
-            </div>
-            <div class="style-card">
-                <img src="style3.jpg" alt="Стиль 3">
-                <p>Стріт</p>
-            </div>
+            <button class="next">❯</button>
         </div>
-        <h2>Залишити коментар</h2>
-        <form id="commentForm">
-            <input type="text" id="name" placeholder="Ваше ім'я" required>
-            <textarea id="comment" placeholder="Ваш коментар" required></textarea>
-            <button type="submit">Залишити коментар</button>
-        </form>
-        <div id="commentsSection">
-            <h2>Коментарі</h2>
-            <div id="commentsList"></div>
-        </div>
-    </div>
+
+        <!-- Форма замовлення -->
+        <section class="order-form">
+            <h2>Форма замовлення</h2>
+            <form id="orderForm">
+                <input type="text" name="name" placeholder="Прізвище та ім'я" required>
+                <input type="email" name="email" placeholder="Електронна адреса" required>
+                <input type="text" name="address" placeholder="Місто, Вулиця" required>
+                <input type="text" name="postOffice" placeholder="Поштове відділення" required>
+                <button type="submit">Замовити</button>
+            </form>
+        </section>
+
+        <!-- Коментарі -->
+        <section class="comments">
+            <h2>Коментарі від користувачів</h2>
+            <ul id="commentList"></ul>
+            <textarea id="commentInput" placeholder="Залиште коментар..."></textarea>
+            <button id="submitComment">Додати коментар</button>
+        </section>
+    </main>
+
     <script src="script.js"></script>
 </body>
 </html>
