@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Одяг Стилі</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Оберіть стиль одягу</h1>
+        <div class="styles">
+            <div class="style-card">
+                <img src="style1.jpg" alt="Стиль 1">
+                 <p>Опіум</p>
+            </div>
+            <div class="style-card">
+                <img src="style2.jpg" alt="Стиль 2">
+                <p>Готика</p>
+            </div>
+            <div class="style-card">
+                <img src="style3.jpg" alt="Стиль 3">
+                <p>Стріт</p>
+            </div>
+        </div>
+        <h2>Залишити коментар</h2>
+        <form id="commentForm">
+            <input type="text" id="name" placeholder="Ваше ім'я" required>
+            <textarea id="comment" placeholder="Ваш коментар" required></textarea>
+            <button type="submit">Залишити коментар</button>
+        </form>
+        <div id="commentsSection">
+            <h2>Коментарі</h2>
+            <div id="commentsList"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
